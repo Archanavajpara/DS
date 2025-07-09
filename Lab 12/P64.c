@@ -51,6 +51,7 @@ void Display()
             i++;
         } // while
         printf("null");
+        printf("Linked is null");
     }
     else
     {

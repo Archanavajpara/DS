@@ -51,8 +51,7 @@ void Display()
             i++;
         } // while
         printf("null");
-        printf("Linked is null");
-    }
+  }
     else
     {
         printf("\nlink list 1 is empty.\n");

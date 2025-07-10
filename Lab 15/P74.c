@@ -23,7 +23,7 @@ void addSong()
     scanf("%d", &duration);
 
     struct Song *newSong = (struct Song *)malloc(sizeof(struct Song));
-    strcpy(newSong->title, title);
+    strcpy(newSong->title, title);//to copy array element we use strcpy
     newSong->duration = duration;
     newSong->rptr = newSong->lptr = NULL;
 
@@ -106,7 +106,7 @@ void playCurrent()
     printf("Now Playing: \"%s\" [%d sec]\n", current->title, current->duration);
 } // play current
 
-void playrptr()
+void playNext()
 {
     if (current && current->rptr)
     {
@@ -115,11 +115,11 @@ void playrptr()
     } // if
     else
     {
-        printf("No rptr song in the playlist.\n");
+        printf("No Next song in the playlist.\n");
     } // else
-} // play rptr
+} // play Next
 
-void playlptrious()
+void playPrevious()
 {
     if (current && current->lptr)
     {
@@ -128,9 +128,9 @@ void playlptrious()
     } // if
     else
     {
-        printf("No lptrious song in the playlist.\n");
+        printf("No Previous song in the playlist.\n");
     } // else
-} // play lptrious
+} // play Previous
 
 void displayPlaylist()
 {
@@ -183,7 +183,7 @@ void main()
             playrptr();
             break;
         case 5:
-            playlptrious();
+            playPrevious();
             break;
         case 6:
             displayPlaylist();
